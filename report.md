@@ -411,62 +411,18 @@ for config_name, config in configs.items():
 
 ### Model Architectures using `add_graph`
 - **Overfit Configuration**:
-- DenseModel(
-  (model): Sequential(
-    (0): Linear(in_features=1, out_features=100, bias=True)
-    (1): ReLU()
-    (2): Linear(in_features=100, out_features=100, bias=True)
-    (3): ReLU()
-    (4): Linear(in_features=100, out_features=100, bias=True)
-    (5): ReLU()
-    (6): Linear(in_features=100, out_features=100, bias=True)
-    (7): ReLU()
-    (8): Linear(in_features=100, out_features=100, bias=True)
-    (9): ReLU()
-    (10): Linear(in_features=100, out_features=1, bias=True)
-  )
-)
   - A highly complex model with excessive parameters, leading to overfitting.  
   - Deeper layers and a large number of neurons allow it to memorize data rather than generalize.  
 
 - **Optimal Configuration**:
-- DenseModel(
-  (model): Sequential(
-    (0): Linear(in_features=1, out_features=64, bias=True)
-    (1): ReLU()
-    (2): Linear(in_features=64, out_features=64, bias=True)
-    (3): ReLU()
-    (4): Linear(in_features=64, out_features=64, bias=True)
-    (5): ReLU()
-    (6): Linear(in_features=64, out_features=1, bias=True)
-  )
-)  
   - A well-balanced architecture with enough capacity to learn meaningful patterns without overfitting.  
   - Features sufficient depth and width to capture complex representations while avoiding excessive complexity.  
 
 - **Underfit Configuration**:
-- DenseModel(
-  (model): Sequential(
-    (0): Linear(in_features=1, out_features=16, bias=True)
-    (1): Sigmoid()
-    (2): Linear(in_features=16, out_features=1, bias=True)
-  )
-)
   - A shallow network with insufficient parameters, making it incapable of learning useful patterns.  
   - The model lacks the capacity to represent the data adequately, leading to high bias.  
 
 - **Basic Configuration**:
-- DenseModel(
-  (model): Sequential(
-    (0): Linear(in_features=1, out_features=64, bias=True)
-    (1): ReLU()
-    (2): Linear(in_features=64, out_features=64, bias=True)
-    (3): ReLU()
-    (4): Linear(in_features=64, out_features=64, bias=True)
-    (5): ReLU()
-    (6): Linear(in_features=64, out_features=1, bias=True)
-  )
-)
   - A moderately complex architecture, but not optimized for the dataset.  
   - Can be adjusted through hyperparameter tuning to improve performance.  
 
