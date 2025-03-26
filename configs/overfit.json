@@ -1,0 +1,9 @@
+{
+  "hidden_layers": 5,
+  "neurons_per_layer": 100,
+  "activation_hidden": "relu",
+  "activation_output": "linear",
+  "num_epochs": 50,
+  "learning_rate": 0.0001,
+  "batch_size": 32
+}
