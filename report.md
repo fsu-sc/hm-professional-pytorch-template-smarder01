@@ -371,9 +371,9 @@ for config_name, config in configs.items():
   - Performs reasonably well but does not outperform the optimal configuration.  
 
 ---
+### Training Loss Curves
 <img width="770" alt="Screenshot 2025-03-26 at 5 14 00 PM" src="https://github.com/user-attachments/assets/b791c4c3-6bb5-4822-9341-eb736c514335" />
 
-### Training Loss Curves
 - **Overfit Configuration**:  
   - The loss curve sharply drops early, followed by continuous fine-tuning, indicating memorization rather than real learning.  
   - Training loss remains low, but the validation loss starts diverging, proving the model is overfitting.  
@@ -407,9 +407,9 @@ for config_name, config in configs.items():
   - The validation loss curve is more stable than in the overfitting case but requires further tuning to reach optimal generalization.  
 
 ---
+### Model Architectures using `add_graph`
 <img width="650" alt="Screenshot 2025-03-26 at 5 30 03 PM" src="https://github.com/user-attachments/assets/c2c9b9cb-d8a8-4a7a-badc-8b69683797c2" />
 
-### Model Architectures using `add_graph`
 - **Overfit Configuration**:
   - A highly complex model with excessive parameters, leading to overfitting.  
   - Deeper layers and a large number of neurons allow it to memorize data rather than generalize.  
