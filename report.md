@@ -340,8 +340,10 @@ for config_name, config in configs.items():
     writer.close()
 ```
 ---
-insert picture
+
 ### Training Time (Epochs to Convergence)
+<img width="770" alt="Screenshot 2025-03-26 at 5 24 01 PM" src="https://github.com/user-attachments/assets/1d87e8aa-4a4e-44b8-a5e0-ecf0b10de87a" />
+
 - **Overfit Configuration**:  
   - Converges the slowest due to the high model complexity and excessive parameters.  
   - Training loss continues to decrease while validation loss starts increasing, indicating memorization rather than learning.  
@@ -366,7 +368,7 @@ insert picture
   - Performs reasonably well but does not outperform the optimal configuration.  
 
 ---
-insert pictures
+<img width="770" alt="Screenshot 2025-03-26 at 5 14 00 PM" src="https://github.com/user-attachments/assets/b791c4c3-6bb5-4822-9341-eb736c514335" />
 
 ### Training Loss Curves
 - **Overfit Configuration**:  
@@ -383,8 +385,6 @@ insert pictures
 
 - **Basic Configuration**:  
   - The loss curve shows decent improvement, but further hyperparameter tuning is needed to match the performance of the optimal configuration.  
-
----
 
 ### Validation Loss Curves
 
@@ -404,6 +404,7 @@ insert pictures
   - The validation loss curve is more stable than in the overfitting case but requires further tuning to reach optimal generalization.  
 
 ---
+insert pictures
 
 ### Model Architectures using `add_graph`
 - **Overfit Configuration**:  
