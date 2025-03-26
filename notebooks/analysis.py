@@ -53,6 +53,7 @@ for config_name, config in configs.items():
     val_loader = DataLoader(val_dataset, batch_size=config["batch_size"], shuffle=False)
 
     # Log model graph
+    print(model)
     dummy_input = torch.ones(1, 1).to(device)
     writer.add_graph(model, dummy_input)
 
