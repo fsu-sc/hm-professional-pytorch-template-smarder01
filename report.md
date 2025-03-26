@@ -154,7 +154,7 @@ class Metrics:
     def log(self, epoch, train_loss, val_loss, train_acc=None, val_acc=None):
         print_msg = f"Epoch {epoch} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}"
         if train_acc is not None and val_acc is not None:
-            msg += f" | Train Acc: {train_acc:.4f} | Val Acc: {val_acc:.4f}"
+            print_msg += f" | Train Acc: {train_acc:.4f} | Val Acc: {val_acc:.4f}"
         print(print_msg)
 ```
 ---
